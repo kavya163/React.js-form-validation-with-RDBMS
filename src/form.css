@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
     text-align: center;
-    background-image: url("./background.jpeg");
+    background-color: rgb(145,204,241);
 	font-family: 'Poppins', sans-serif;
 }
 body:before {
