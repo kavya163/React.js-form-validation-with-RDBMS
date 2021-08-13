@@ -48,16 +48,9 @@ The code generally has the following methods:
 
 For example, Consider handlingOnchange() function of the class Form, which sets the current state to the state objects(state. username, state. password,..).
 
-//handlingOnChange code looks like:
-class Form extends Component{
- handlingOnChange = (event) => {
-    const a = event.target.name;
-    const b = event.target.value;
-    this.setState({ [a]: b }, () => {
-      this.validation(a, b);
-    });
-  };
-}
+
+<img width="333" alt="Screen Shot 2021-08-13 at 12 49 23 PM" src="https://user-images.githubusercontent.com/67653721/129411367-9d9ec3c9-ce61-407a-b9b6-8aa3b41e0a45.png">
+
 
 In Unit testing, 
 1. Check whether the variables are defined appropriately and adequately stored. 
