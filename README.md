@@ -1,6 +1,6 @@
 # React.js-form-validation-with-RDBMS
 
-##Introduction
+## Introduction
 
 A React.js application hosted on AWS Amplify with AWS RDS as the database. In this application, user information is captured, validated, and sent to AWS via REST API end point Gateway to process the user submitted request, and then creates an user entry in the database. AWS Lambda is invoked by the AWS API Gateway, which invokes a connection to the database to store the user information and creates a response which is then sent back to the web browser. 
 
@@ -14,11 +14,11 @@ Steps:
 6. Response from Lambda is send back to browser.
 
 
-##Testcases:
-###Positive:
+## Testcases:
+### Positive:
 * (First name.isValid) && (Last name.isValid) && (E-mail.isValid) &&(Password.isValid) == true
 
-###Negative:
+### Negative:
 * (First name.isNull) && (Last name.isNull) && (E-mail.isNull) &&(Password.isNull) == false
 * (First name.isValid) && (Last name.isNull) && (E-mail.isNull) &&(Password.isNull) == false
 * (First name.isNull) && (Last name.isValid) && (E-mail.isNull) &&(Password.isNull) == false
@@ -34,7 +34,8 @@ Steps:
 * (First name.isValid) && (Last name.isValid) && (E-mail.isNull) &&(Password.isValid) == false
  
  We will cover the unit and integration testing. 
-##UNIT TESTING:
+ 
+## UNIT TESTING:
 Unit testing is where the small unit of a program (a function or procedure) is tested. It may or may not take some input parameters and may or may not return some values.
 
 The code generally has the following methods:
@@ -136,8 +137,6 @@ render() {
     return (
       <div className="form">
         <form onSubmit={this.alertmsg}>
-          <h2>Welcome!</h2>
-          <p>First Name:</p>
           <input
             type="text"
             name="firstname"
@@ -163,7 +162,7 @@ In Unit testing,
 
 
 
-##INTEGRATION TESTING:
+## INTEGRATION TESTING:
 Integration testing is where individual units are tested together to check whether all the units interact as expected.
 
 * Verify mandatory input parameters
