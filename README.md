@@ -14,7 +14,7 @@ Steps:
 6. Response from Lambda is send back to browser.
 
 
-#### You can view output here --> https://main.d2zby7bmb7wakv.amplifyapp.com/
+### You can view output here --> https://main.d2zby7bmb7wakv.amplifyapp.com/
 
 
 ## Testcases:
