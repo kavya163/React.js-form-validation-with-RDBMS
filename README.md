@@ -32,18 +32,20 @@ Steps:
 * (First name.isNull) && (Last name.isNull) && (E-mail.isValid) &&(Password.isValid) == false
 * (First name.isValid) && (Last name.isValid) && (E-mail.isValid) &&(Password.isNull) == false
 * (First name.isValid) && (Last name.isValid) && (E-mail.isNull) &&(Password.isValid) == false
- 
+
+ 
  We will cover the unit and integration testing. 
  
 ## UNIT TESTING:
 Unit testing is where the small unit of a program (a function or procedure) is tested. It may or may not take some input parameters and may or may not return some values.
 
 The code generally has the following methods:
-handlingOnChange()
-validation(a, b)
-handleButtonClicked()
-render()
- 
+- handlingOnChange()
+- validation(a, b)
+- handleButtonClicked()
+- render()
+
+
 For example, Consider handlingOnchange() function of the class Form, which sets the current state to the state objects(state. username, state. password,..).
 
 //handlingOnChange code looks like:
