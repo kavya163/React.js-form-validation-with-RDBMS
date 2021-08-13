@@ -55,100 +55,27 @@ For example, Consider handlingOnchange() function of the class Form, which sets 
 In Unit testing, 
 1. Check whether the variables are defined appropriately and adequately stored. 
 2. Then we should also check whether the constants are stored in their specific path. 
- 
+
 Consider the validation(a, b) function of the class Form, which checks the regex validation for every field and returns the error.
 
-//validation code looks like:
-class Form extends Component{
-validation(a, b) {
-    let firstNameValid = this.state.firstname;
-    let lastNameValid = this.state.lastname;
-    let passwordValid = this.state.password;
-    let emailValid = this.state.emailValid;
-    let formError = this.state.formError;
+<img width="498" alt="Screen Shot 2021-08-13 at 12 51 17 PM" src="https://user-images.githubusercontent.com/67653721/129411593-b5cea245-6c9f-49a3-be02-5f48782c0bda.png">
 
-    switch (a) {
-      case "firstname":
-        firstNameValid = b.length > 1;
-        formError.firstname = firstNameValid
-          ? ""
-          : "Firstname should contain atleast 2 characters";
-        console.log(b);
-        break;
-      .
-      .
-      .
-      default:
-        break;
-    }
-  }
-}
- 
 In Unit testing,
 1. Our motive should be to check whether the switch cases and exception conditions work. 
 2. Then we should also check multiple error messages work when multiple conditions occur.
 
 
 Consider, handleButtonClicked() function of the class Form, which checks the length of each field and returns an error if the length is zero.
+<img width="500" alt="Screen Shot 2021-08-13 at 12 53 28 PM" src="https://user-images.githubusercontent.com/67653721/129411868-039f591a-3ed5-416d-8618-1eb147a7e8e9.png">
 
-//handleButtonClicked() method looks like this:
-handleButtonClicked() {
-    var fname = true;
-    var lname = true;
-    var eError = true;
-    var pError = true;
 
-    var fSubmit = this.state.formSubmission;
-
-    if (this.state.firstname.length <= 0) {
-      console.log("Inside First Name");
-      fname = false;
-      fSubmit = false;
-    }
-    .
-    .
-    .
-    this.setState({
-      firstNameValid: fname,
-      ......
-      formError: {
-        firstname: fname ? "" : "Please enter valid First Name",
-        ....
-      },
-      formSubmission: fSubmit,
-    });
-  }
- 
 In Unit testing,
 1. Our motive should be to check whether the if cases and exception conditions work correctly.
 2. To also check, does it returns the specific error.
 3. Then we should also check multiple error messages work when multiple conditions occur.
- 
-Consider, render() function of the class Form, which contains the main form.
 
-/render() method looks like this:
-class Form extends Component{
-render() {
-    return (
-      <div className="form">
-        <form onSubmit={this.alertmsg}>
-          <input
-            type="text"
-            name="firstname"
-            placeholder="enter your first name"
-            value={this.state.firstname}
-            onChange={this.handlingOnChange}
-            required />
-          {this.state.firstNameValid ? null : (
-            <p>{this.state.formError.firstname}</p>
-          )}
-         .
-         .
-          <button type="submit"
-            onClick={this.handleButtonClicked.bind(this)}
-            disabled={this.state.formSubmission}>
-            Submit </button>
-        </form> </div> );}}}
+Consider, render() function of the class Form, which contains the main form.
+<img width="470" alt="Screen Shot 2021-08-13 at 12 54 52 PM" src="https://user-images.githubusercontent.com/67653721/129411906-944850f1-99ca-46f9-8c90-92ab1c0db410.png">
 
 In Unit testing,
 1. Our motive should be to check whether the onChange attribute calls the handlingOnChange function.
@@ -178,5 +105,3 @@ Integration testing is where individual units are tested together to check whet
 * Check if null values are accepted where they should be not.
 * Check if data is written correctly to the table when the user creates it through the app (e.g., creates/ updates profile info).
 * Check app behavior when the database server is not working.
-
-
