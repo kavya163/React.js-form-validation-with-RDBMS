@@ -68,21 +68,24 @@ class Form extends Component {
 
   alertmsg = () => {
     const api =
-      "hhttps://b9f9p3sbll.execute-api.us-east-1.amazonaws.com/development";
+      "https://b9f9p3sbll.execute-api.us-east-1.amazonaws.com/development";
     const data = {
       fname: this.state.firstname,
       lname: this.state.lastname,
-      email: this.state.email,
-      password: this.state.password,
+      eError: this.state.email,
+      pError: this.state.password,
     };
     axios
       .get(api, data)
       .then((response) => {
         console.log(response);
+        console.log("No Error");
       })
       .catch((error) => {
+        console.log("Error Krishna");
         console.log(error);
       });
+
     alert("Thanks for submitting your information");
   };
 
@@ -140,7 +143,7 @@ class Form extends Component {
           <input
             type="text"
             name="firstname"
-            placeholder="enter your first name"
+            placeholder="Enter your first name"
             value={this.state.firstname}
             //when the boxfield gets triggered it calls the handlingOnchange
             onChange={this.handlingOnChange}
@@ -170,7 +173,7 @@ class Form extends Component {
           <input
             type="email"
             name="email"
-            placeholder="enter your email"
+            placeholder="Enter your email"
             value={this.state.email}
             //when the boxfield gets triggered it calls the handlingOnchange
             onChange={this.handlingOnChange}
@@ -184,7 +187,7 @@ class Form extends Component {
           <input
             type="password"
             name="password"
-            placeholder="enter your password"
+            placeholder="Enter your password"
             value={this.state.password}
             //when the boxfield gets triggered it calls the handlingOnchange
             onChange={this.handlingOnChange}
