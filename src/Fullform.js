@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./form.css";
+import axios from "axios";
 
 class Form extends Component {
   //setting state objects
@@ -66,7 +67,23 @@ class Form extends Component {
   }
 
   alertmsg = () => {
-    alert("Thank you!! Your information has been submitted.");
+    const api =
+      "hhttps://b9f9p3sbll.execute-api.us-east-1.amazonaws.com/development";
+    const data = {
+      fname: this.state.firstname,
+      lname: this.state.lastname,
+      email: this.state.email,
+      password: this.state.password,
+    };
+    axios
+      .get(api, data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    alert("Thanks for submitting your information");
   };
 
   handleButtonClicked() {
