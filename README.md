@@ -14,6 +14,9 @@ Steps:
 6. Response from Lambda is send back to browser.
 
 
+#### You can view output here --> https://main.d2zby7bmb7wakv.amplifyapp.com/
+
+
 ## Testcases:
 ### Positive:
 * (First name.isValid) && (Last name.isValid) && (E-mail.isValid) &&(Password.isValid) == true
